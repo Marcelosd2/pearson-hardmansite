@@ -1,0 +1,106 @@
+:root {
+    --main-color: #d92123;
+    --primary-text-color: #fff;
+    --secondary-text-color: #191919;
+    --secondary-color: #868686;
+    --tertiary-color: #eff3f4;
+    --secondary-bg-color: #5c1011;
+       
+}
+
+
+* {
+     font-family: "Lato";
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+   
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+/* id */ 
+#header{
+    min-height: 90vh;
+    background-image: url("../images/main_banner4.png");
+    background-size: cover;
+    background-position: center;
+    color:var(--primary-text-color);
+    margin-bottom: 2rem;
+}
+#inner-header{
+    /*padrão linha*/
+    display: flex;
+    /* alinhamento e horizontal, eixo x */
+    justify-content: space-between;
+    /*alinhamento vertical eixo y*/
+    align-items: center;
+}    
+#brand{
+    background-color:var(--main-color) ;
+    padding: 1rem;
+}
+#navbar{
+    display: flex;
+    gap: 2rem;
+    text-transform: uppercase;
+    margin-right: 2rem;
+}
+
+#navbar a {
+    color: var(--primary-text-color);
+    font-weight: bold;
+    padding: 1rem;
+
+}
+.banner.active{
+    opacity: 1; /*banner ativo e mostrado*/
+}
+.banner{
+    max-width: 45%;
+    opacity: 0;  /*muda a opacidade do banner*/
+    padding: 4rem;
+    position: absolute;
+    
+}
+.banner h2{
+    font-size: 4rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 2;
+    }
+    .banner{
+        font-size: 1,5rem;
+    }
+    .dots{
+        display: flex;
+        gap: 2rem;
+        position: absolute;
+        bottom: 9rem;
+        left: 3rem;
+    }
+
+    .dot{
+        width: 20px;
+        height: 20px;
+        background-color: var(--secondary-color);
+    }
+    .dot.banner.active{
+        background-color: var(--secondary-bg-color);
+    }
+.square{
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    z-index: 1;
+}    
